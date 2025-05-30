@@ -128,8 +128,8 @@ public class PolInterpreter {
     private static String throwError(String error) {
         errors++;
         if (errors == 3) {
-            System.out.println(throwError("FATAL I'm annoyed of your errors!" +
-                    " \uD83D\uDE21 I'm an interpreter, not a teacher!"));
+            System.out.println("\u001B[31mFATAL ERROR: I'm annoyed of your errors!" +
+                    " \uD83D\uDE21 I'm an interpreter, not a teacher!\u001B[0m");
             exit(20);
         }
         return "\u001B[31mERROR: " + error + "\u001B[0m";
