@@ -14,7 +14,7 @@ In POL, you mustn't be too polite and too impolite. There are simply two rules t
 
 2. Don't write more than two lines in row which don't begin with *please*
 
-**CAUTION:** All commands in the documentation are written **without** *please* (also if you need *please*).
+**CAUTION:** All commands in the documentation are written **without** *please* (you may need to insert a *please* in your case).
 
 ## Calculate
 
@@ -66,7 +66,7 @@ Replace *10* with the exclusive maximum of the random number. The minimum is 0.
 
 Exit the interpreter with the following command: `please exit`
 
-CAUTION: This is a politeness exception. If you want to run `exit`, you **always** need a *please* at the beginning of the line.
+**CAUTION:** This is a politeness exception. If you want to run `exit`, you **always** need a *please* at the beginning of the line.
 
 ## Troubleshooting
 
