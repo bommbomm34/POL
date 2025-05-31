@@ -18,47 +18,27 @@ In POL, you mustn't be too polite and too impolite. There are simply two rules t
 
 ## Calculate
 
-If you want to add, subtract, multiply, divide or use modulo, you must run the following line:
-
-```calc x + y```
-calc x + y
-```
+If you want to add, subtract, multiply, divide or use modulo, you must run the following line: ```calc x + y```
 
 Replace *x* and *y* with the values you want to calculate and *+* with the operator (logical operators like ```!=``` are also possible) you want. If you use a logical operator, the result will be *true* or *false*.
 
 ## Print
 
-If you want to print a text, simply type:
-
-``` ```
-print text
-```
+If you want to print a text, simply type: ```print text```
 
 Replace *text* with the text you want to print. All backslashes you write will be deleted.
 
 ## Prompt
 
-If you want to ask the user for something, run the following line:
-
-``` ```
-prompt target prompt_question
-```
+If you want to ask the user for something, run the following line: ```prompt target prompt_question```
 
 Replace *prompt_question* with the question you want to ask for. The input will be saved in the variable *target*.
 
 ## Set/Get variables
 
-You can get a variable with the following syntax:
+You can get a variable with the following syntax: ```{variable}```
 
-``` ```
-{variable}
-```
-
-There is no special method to set a variable, but you can set the output of a method to a variable:
-
-``` ```
-print value > variable
-```
+There is no special method to set a variable, but you can set the output of a method to a variable: ```print value > variable```
 
 Replace *value* with the value you want to set the variable.
 
@@ -68,11 +48,7 @@ Replace *variable* with the variable name you want to get or set.
 
 ## Run a file
 
-See README.md to learn how to run a file by calling the interpreter JAR directly. If you want to run the file in the interpreter, run the following code:
-
-``` ```
-run main.pol
-```
+See README.md to learn how to run a file by calling the interpreter JAR directly. If you want to run the file in the interpreter, run the following code: `run main.pol`
 
 Replace *main.pol* with the POL file you want to run. The interpreter doesn't check the file extension, but it's a good practice to save POL files with the file extension *.pol*.
 
@@ -80,27 +56,15 @@ Replace *main.pol* with the POL file you want to run. The interpreter doesn't ch
 
 If you want a random number, you need to run one of the following lines:
 
-Run this line, if you want a decimal number:
+Run this line, if you want a decimal number: `rand 10`
 
-```
-rand 10
-```
-
-Run this line, if you want an integer:
-
-```
-randi 10
-```
+Run this line, if you want an integer: `randi 10`
 
 Replace *10* with the exclusive maximum of the random number. The minimum is 0.
 
 ## Exit the interpreter
 
-Exit the interpreter with the following command:
-
-```
-please exit
-```
+Exit the interpreter with the following command: `please exit`
 
 CAUTION: This is a politeness exception. If you want to run `exit`, you **always** need a *please* at the beginning of the line.
 
