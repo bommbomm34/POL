@@ -78,29 +78,27 @@ public class PolInterpreter {
     private static String formatParameter(String parameter) {
         String newParameter = parameter;
         for (Map.Entry<String, String> entry : variables.entrySet()) {
-            if (parameter.equals(entry.getKey())) {
-                newParameter = entry.getValue();
-                break;
-            }
+            newParameter = newParameter.replace("{" + entry.getKey() + "}",
+                    entry.getValue());
         }
         return newParameter.replace("\\", "");
     }
 
     private static String calc(double x, double y, String operator) {
-        switch (operator) {
-            case "+":
-                return formatNumber(x + y);
-            case "-":
-                return formatNumber(x - y);
-            case "*":
-                return formatNumber(x * y);
-            case "/":
-                return formatNumber(x / y);
-            case "mod":
-                return formatNumber(x % y);
-            default:
-                return throwError("Invalid operator");
-        }
+        return switch (operator) {
+            case "+" -> formatNumber(x + y);
+            case "-" -> formatNumber(x - y);
+            case "*" -> formatNumber(x * y);
+            case "/" -> formatNumber(x / y);
+            case "%" -> formatNumber(x % y);
+            case "==" -> String.valueOf(x == y);
+            case "!=" -> String.valueOf(x != y);
+            case "<=" -> String.valueOf(x <= y);
+            case ">=" -> String.valueOf(x >= y);
+            case "<" -> String.valueOf(x < y);
+            case ">" -> String.valueOf(x > y);
+            default -> throwError("Invalid operator");
+        };
     }
 
     private static String formatNumber(double number) {
@@ -127,12 +125,16 @@ public class PolInterpreter {
 
     private static String throwError(String error) {
         errors++;
+        String errorOutput = "\u001B[31mERROR: " + error + "\u001B[0m";
         if (errors == 3) {
+            System.out.println(errorOutput);
             System.out.println("\u001B[31mFATAL ERROR: I'm annoyed of your errors!" +
                     " \uD83D\uDE21 I'm an interpreter, not a teacher!\u001B[0m");
             exit(20);
+            return "";
+        } else {
+            return errorOutput;
         }
-        return "\u001B[31mERROR: " + error + "\u001B[0m";
     }
     private static String throwRedMessage(String message) {
         return "\u001B[31m" + message + "\u001B[0m";
@@ -181,6 +183,13 @@ public class PolInterpreter {
                         @Override
                         public String getOutput(String[] parameters) {
                             return formatNumber(random.nextDouble(Double.parseDouble(parameters[0])));
+                        }
+                    });
+                case "randi":
+                    return checkAndFormatParameters(1, parameters, new InputListener() {
+                        @Override
+                        public String getOutput(String[] parameters) {
+                            return String.valueOf(random.nextInt(Integer.parseInt(parameters[0])));
                         }
                     });
                 default:
