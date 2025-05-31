@@ -10,7 +10,7 @@ POL is an esoteric and polite programming language. It is simple, but you need t
 
 3. Run the interpreter console with: ```java -jar PolInterpreter.jar```
 
-4. If you want to run the a POL file, run (replace main.pol with the name of your POL file): ```java -jar PolInterpreter.jar main.pol```
+4. If you want to run a POL file, run (replace main.pol with the name of your POL file): ```java -jar PolInterpreter.jar main.pol```
 
 # Documentation
 
