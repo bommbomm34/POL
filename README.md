@@ -1,6 +1,6 @@
 # POL
 
-POL is an esoteric and polite programming language. It is simple, but you need to be polite. Follow the instructions here to install the interpreter. You can also read the documentation in the DOCS.md.
+POL is a polite programming language. It is simple, but you need to be polite. Follow the instructions here to install the interpreter. You can also read the documentation in the DOCS.md.
 
 # Installation
 
