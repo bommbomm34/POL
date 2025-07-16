@@ -14,6 +14,6 @@ POL is a polite programming language. It is simple, but you need to be polite. F
 
 # Documentation
 
-See DOCS.md for the documentation. The programming language is simple: You don't need to learn much!
+See [the documentation](DOCS.md) to learn this programming language. The programming language is simple: You don't need to learn much!
 
 
