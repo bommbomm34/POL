@@ -14,7 +14,7 @@ In POL, you mustn't be too polite and too impolite. There are simply two rules t
 
 2. Don't write more than two lines in row which don't begin with *please*
 
-**CAUTION:** All commands in the documentation are written **without** *please* (you may need to insert a *please* in your case).
+**CAUTION:** All commands in the documentation are written **without** *please* (you might need to insert a *please* in your case).
 
 ## Calculate
 
