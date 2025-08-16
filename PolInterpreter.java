@@ -176,7 +176,6 @@ public class PolInterpreter {
                     Scanner scanner = new Scanner(System.in);
                     System.out.print(promptMessage);
                     variables.put(parameters[0], scanner.nextLine());
-                    scanner.close();
                     return "";
                 case "rand":
                     return checkAndFormatParameters(1, parameters, new InputListener() {
