@@ -70,7 +70,7 @@ Exit the interpreter with the following command: `please exit`
 
 ## Troubleshooting
 
-If you receive three errors totally in the session, a fatal error will be thrown and the interpreter console exits with status code 20.
+If you receive three errors totally in a session, a fatal error will be thrown and the interpreter console exits with status code 20.
 
 If you receive an internal error or a Java exception, please open an issue in the POL repository and answer the following questions, so I can solve the problem:
 
@@ -80,8 +80,8 @@ If you receive an internal error or a Java exception, please open an issue in th
 
 3. What was the code you ran?
 
-4. What version of the interpreter did you use?
+4. Which version of the interpreter did you use?
 
-5. What version of Java did you use?
+5. Which version of Java did you use?
 
 
